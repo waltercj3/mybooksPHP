@@ -2,6 +2,8 @@
 
 "use strict";
 
+//functionality for the AddEdit.html page
+//uses isbn number to check if the book is already listed
 window.addEventListener("load", function() {
     var bookMessage, fetchButton, isbnInput, xhr, isbn;
     bookMessage = document.getElementById('bookMessage');
@@ -9,6 +11,7 @@ window.addEventListener("load", function() {
     isbnInput = document.getElementById('isbnInput');
     xhr = new window.XMLHttpRequest();
     
+    //check button uses isbn
     fetchButton.addEventListener("click", function() {
         var url;
         isbn = isbnInput.value;
@@ -29,6 +32,7 @@ window.addEventListener("load", function() {
         isbnInput.value = isbn;
     });
     
+    //fills in form if the data exists
     xhr.addEventListener("load", function() {
         var response = JSON.parse(xhr.responseText);
 
