@@ -20,7 +20,7 @@
     <div>
       <?php
       
-        @ $db = new mysqli('**************', '**************', '**************', '**************');
+        @ $db = new mysqli('#######', '#######', '#######', '#######');
       
         if (mysqli_connect_errno()) {
            echo '<h3>Error: Could not connect to database.  Please try again later.</h3>';

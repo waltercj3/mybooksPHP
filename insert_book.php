@@ -92,7 +92,7 @@
           ."curr_ed_date: $curr_ed_date<br />"
           ."</p>";
     
-      @ $db = new mysqli('**************', '**************', '**************', '**************');
+      @ $db = new mysqli('#######', '#######', '#######', '#######');
     
       if (mysqli_connect_errno()) {
         echo "Error: Could not connect to database.  Please try again later.";
