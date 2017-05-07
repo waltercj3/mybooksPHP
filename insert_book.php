@@ -29,6 +29,8 @@
       $rating=$_POST['rating'];
       $orig_pub_date=$_POST['orig_pub_date'];
       $curr_ed_date=$_POST['curr_ed_date'];
+      
+      require_once("../lib/vars.php");
     
       if (!$isbn) {
          echo "An ISBN is required.<br />"
@@ -92,7 +94,7 @@
           ."curr_ed_date: $curr_ed_date<br />"
           ."</p>";
     
-      @ $db = new mysqli('#######', '#######', '#######', '#######');
+      @ $db = new mysqli($host, $username, $password, $database);
     
       if (mysqli_connect_errno()) {
         echo "Error: Could not connect to database.  Please try again later.";

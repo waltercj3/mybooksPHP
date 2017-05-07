@@ -4,7 +4,7 @@
     
     $isbn = $_GET['isbn'];
   
-    @ $db = new mysqli('#######', '#######', '#######', '#######');
+    @ $db = new mysqli($host, $username, $password, $database);
         
     if (mysqli_connect_errno()) {
        $error = 'Error: Could not connect to database.  Please try again later.';

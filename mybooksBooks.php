@@ -19,8 +19,10 @@
     </nav>
     <div>
       <?php
+        
+        require_once("../lib/vars.php");
       
-        @ $db = new mysqli('#######', '#######', '#######', '#######');
+        @ $db = new mysqli($host, $username, $password, $database);
       
         if (mysqli_connect_errno()) {
            echo '<h3>Error: Could not connect to database.  Please try again later.</h3>';
